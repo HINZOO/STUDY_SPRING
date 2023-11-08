@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="'hello ' + ${name}">hello! empty</p>
+<!--hello! empty : 서버를 켜지않았을때 보여지는 화면내용-->
+</body>
+</html>
+
+<!--
+🐸 MVC 작동 원리
+helloController 에서  hello-template를 찾음
+model 에서 name 이라는  key 값에 파라미터 데이터 입력
+viewResolver가 template/hello-template.html을 찾아
+템플릿엔진에게 랜더링을 넘기고 Thymeleaf 템플릿 엔진이 name 이라는 key값에 해당 데이터를 랜더링하여
+변환을 한 html을 웹브라우저에 표현
+-->
