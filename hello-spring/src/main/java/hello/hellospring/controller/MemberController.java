@@ -4,7 +4,7 @@ import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-@Controller
+@Controller //Controller는 수동설정이 불가능.
 public class MemberController {
     private final MemberService memberService;
 
