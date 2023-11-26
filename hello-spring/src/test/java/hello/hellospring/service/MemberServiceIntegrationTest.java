@@ -65,6 +65,8 @@ class MemberServiceIntegrationTest {
 
     @Test
     void findMembers() {
+        memberService.findMembers();
+
     }
 
     @Test

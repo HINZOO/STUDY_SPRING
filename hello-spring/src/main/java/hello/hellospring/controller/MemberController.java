@@ -16,7 +16,10 @@ public class MemberController {
 
     @Autowired //스프링이 스프링 컨테이너에서 멤버서비스를 보관했다가 가져와줌=>의존성주입(DI)
     public MemberController(MemberService memberService) {
-        this.memberService = memberService;
+                this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
+        //aop 적용전 프록시 memberService 에서 작업을 수행하고 실행.
+        //-> proxy방식의 aop라고 한다.
     }
 
     @GetMapping("/members/new")
